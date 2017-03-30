@@ -49,6 +49,9 @@ coverage.xml
 *.mo
 *.pot
 
+js/node_modules
+
+
 # Django stuff:
 *.log
 local_settings.py
@@ -87,3 +90,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+
+js/node_modules/
+ipyvolume/static/
