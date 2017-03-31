@@ -39,7 +39,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'jupyter_sphinx.embed_widgets',
-	'nbsphinx',
+    'nbsphinx',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -145,11 +145,11 @@ todo_include_todos = True
 
 
 # try:
-# 	import sphinx_rtd_theme
-# 	html_theme = "sphinx_rtd_theme"
-# 	html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+#     import sphinx_rtd_theme
+#     html_theme = "sphinx_rtd_theme"
+#     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # except:
-# 	print "rtd theme not found"
+#     print "rtd theme not found"
 
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -317,7 +317,7 @@ latex_documents = [
 #
 # latex_appendices = []
 
-# It false, will not define \strong, \code, 	itleref, \crossref ... but only
+# It false, will not define \strong, \code,     itleref, \crossref ... but only
 # \sphinxstrong, ..., \sphinxtitleref, ... To help avoid clash with user added
 # packages.
 #

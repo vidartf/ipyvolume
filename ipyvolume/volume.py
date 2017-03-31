@@ -208,7 +208,7 @@ def quickvolshow(data, lighting=False, data_min=None, data_max=None, tf=None, st
             opacity.append(0)
         while len(level_width) < 3:
             level_width.append(0)
-        for i in range(1,4):
+        for i in range(1, 4):
             tf_kwargs["level"+str(i)] = level[i-1]
             tf_kwargs["opacity"+str(i)] = opacity[i-1]
             tf_kwargs["width"+str(i)] = level_width[i-1]
@@ -229,7 +229,7 @@ def quickvolshow(data, lighting=False, data_min=None, data_max=None, tf=None, st
     return box
 
 def scatter(x, y, z, color=(1,0,0), s=0.01):
-    global _last_figure;
+    global _last_figure
     fig = _last_figure
     if fig is None:
         fig = volshow(None)

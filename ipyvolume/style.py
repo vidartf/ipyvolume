@@ -28,7 +28,7 @@ styles = {}
 _defaults = {
     'axes': {
         'visible': True,
-        'label' : {
+        'label': {
             'color': 'black'
         },
         'ticklabel': {
@@ -40,22 +40,22 @@ _defaults = {
     },
 }
 
+
 def create(name, properties):
     style = copy.deepcopy(_defaults)
     utils.dict_deep_update(style, properties)
     styles[name] = style
     return style
 
-default = light = create("light", \
-{
+
+default = light = create("light", {
     'background-color': 'white',
     'axes': {
         'color': 'black',
     }
 })
 
-dark = create("dark", \
-{
+dark = create("dark", {
     'background-color': 'black',
     'axes': {
         'color': 'white',
@@ -68,55 +68,54 @@ dark = create("dark", \
     }
 })
 
-demo = create("demo", \
-{
-		'background-color': 'white',
-        'box' : {
-            'color': 'pink',
-            'visible': True,
+demo = create("demo", {
+    'background-color': 'white',
+    'box': {
+        'color': 'pink',
+        'visible': True,
+    },
+    'axes': {
+        'color': 'black',
+        'visible': True,
+        'x': {
+            'color': '#f00',
+            'label': {
+                'color': '#0f0'
+            },
+            'ticklabel': {
+                'color': '#00f'
+            },
         },
-        'axes': {
-            'color': 'black',
-            'visible': True,
-            'x': {
-                'color': '#f00',
-                'label': {
-                    'color': '#0f0'
-                },
-                'ticklabel': {
-                    'color': '#00f'
-                },
+        'y': {
+            'color': '#0f0',
+            'label': {
+                'color': '#00f'
             },
-            'y': {
-                'color': '#0f0',
-                'label': {
-                    'color': '#00f'
-                },
-                'ticklabel': {
-                    'color': '#f00'
-                }
-            },
-            'z': {
-                    'color': '#00f',
-                    'label': {
-                        'color': '#f00'
-                    },
-                    'ticklabel': {
-                        'color': '#0f0'
-                    }
+            'ticklabel': {
+                'color': '#f00'
             }
+        },
+        'z': {
+                'color': '#00f',
+                'label': {
+                    'color': '#f00'
+                },
+                'ticklabel': {
+                    'color': '#0f0'
+                }
         }
+    }
 })
 
 minimal = {
-		'background-color': 'white',
-        'box' : {
-            'visible': False,
-        },
-        'axes': {
-            'visible': False,
-            'color': 'black'
-        }
+    'background-color': 'white',
+    'box': {
+        'visible': False,
+    },
+    'axes': {
+        'visible': False,
+        'color': 'black'
+    }
 }
 
 if __name__ == "__main__":
@@ -131,4 +130,3 @@ if __name__ == "__main__":
         with open(dest, "w") as f:
             json.dump(styles, f, indent=2)
         print("wrote json")
-
